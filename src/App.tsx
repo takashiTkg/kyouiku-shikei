@@ -27,13 +27,14 @@ function App() {
           <Button key={i} text={item.text} onClickFunc={() => addItems(item)} />
         )}
       </div>
+
+      <Lists items={items} />
       <button
-        className='w-full mt-2 hover:bg-transparent bg-blue-500 hover:text-blue-700 font-semibold text-white py-2 px-4 border hover:border-blue-500 border-transparent rounded'
+        className='w-full mt-2 mb-2 hover:bg-transparent bg-blue-500 hover:text-blue-700 font-semibold text-white py-2 px-4 border hover:border-blue-500 border-transparent rounded'
         onClick={clearItems}
       >
         クリア
       </button>
-      <Lists items={items} />
       <Player items={items} audio={audio} />
       <Description />
     </div>
